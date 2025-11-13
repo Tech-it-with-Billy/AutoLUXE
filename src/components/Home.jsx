@@ -6,6 +6,8 @@ import FilterBar from "./FilterBar";
 import VehicleBrands from "./VehicleBrands";
 import VehicleBodyType from "./VehicleBodyType";
 import VehicleListings from "./VehicleListings";
+import Procedure from "./Procedure";
+import Services from "./Services";
 
 function Home () {
     return (
@@ -16,6 +18,8 @@ function Home () {
             <VehicleBrands />
             <VehicleBodyType />
             <VehicleListings />
+            <Procedure />
+            <Services />
         </div>
     )
 }
