@@ -19,7 +19,7 @@ function HamburgerMenu() {
                 <div className="absolute right-0 mt-3 w-40 bg-gray-900 text-white rounded-lg shadow-lg p-3 space-y-3">
                     <Link to={"/"} onClick={() => setIsOpen(false)} className="block hover:text-blue-400">Home</Link>
                     <Link to={"/about"} onClick={() => setIsOpen(false)} className="block hover:text-blue-400">About</Link>
-                    <Link to={"/"} onClick={() => setIsOpen(false)} className="block hover:text-blue-400">Contact</Link>
+                    <Link to={"/contact"} onClick={() => setIsOpen(false)} className="block hover:text-blue-400">Contact</Link>
                     <Link to={"/"} onClick={() => setIsOpen(false)} className="block hover:text-blue-400">Bookings</Link>
                     <Link to={"/"} onClick={() => setIsOpen(false)} className="block hover:text-blue-400">Login</Link>
                 </div>
