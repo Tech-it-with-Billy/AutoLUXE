@@ -1,5 +1,6 @@
 import React from "react";
 import "../index.css";
+import { Link } from "react-router-dom";
 
 
 function ProductCard ({image, name, cost, engine, seats, transmission, gasType}) {
@@ -26,7 +27,7 @@ function ProductCard ({image, name, cost, engine, seats, transmission, gasType})
                     <p>{gasType}</p>
                 </div>
             </div>
-            <button className="border-1 w-70 justify-center rounded-lg">Rent Now</button>
+            <Link to={'/checkout'}><button className="border-1 w-70 justify-center rounded-lg">Rent Now</button></Link>
         </div>
     )
 }

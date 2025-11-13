@@ -5,12 +5,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.jsx'
 import About from './components/About.jsx'
 import Contact from './components/Contact.jsx'
+import Checkout from './components/Checkout.jsx'
 
 const router = createBrowserRouter([
   {path: '/', element: <App />},
   {path: '/about', element: <About />},
-  {path: '/contact', element: <Contact />}
-
+  {path: '/contact', element: <Contact />},
+  {path: '/checkout', element: <Checkout />}
 ])
 
 createRoot(document.getElementById('root')).render(
