@@ -3,6 +3,8 @@ import "../index.css";
 import NavBar from "./NavBar";
 import Banner from "./Banner";
 import FilterBar from "./FilterBar";
+import VehicleBrands from "./VehicleBrands";
+import VehicleBodyType from "./VehicleBodyType";
 
 function Home () {
     return (
@@ -10,6 +12,8 @@ function Home () {
             <NavBar />
             <Banner />
             <FilterBar />
+            <VehicleBrands />
+            <VehicleBodyType />
         </div>
     )
 }
