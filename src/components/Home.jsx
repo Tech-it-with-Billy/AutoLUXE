@@ -8,6 +8,8 @@ import VehicleBodyType from "./VehicleBodyType";
 import VehicleListings from "./VehicleListings";
 import Procedure from "./Procedure";
 import Services from "./Services";
+import Reviews from "./Reviews";
+import Footer from "./Footer";
 
 function Home () {
     return (
@@ -20,6 +22,8 @@ function Home () {
             <VehicleListings />
             <Procedure />
             <Services />
+            <Reviews />
+            <Footer />
         </div>
     )
 }
