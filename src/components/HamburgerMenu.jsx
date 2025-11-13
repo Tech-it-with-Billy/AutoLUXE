@@ -21,7 +21,7 @@ function HamburgerMenu() {
                     <Link to={"/about"} onClick={() => setIsOpen(false)} className="block hover:text-blue-400">About</Link>
                     <Link to={"/contact"} onClick={() => setIsOpen(false)} className="block hover:text-blue-400">Contact</Link>
                     <Link to={"/checkout"} onClick={() => setIsOpen(false)} className="block hover:text-blue-400">Bookings</Link>
-                    <Link to={"/"} onClick={() => setIsOpen(false)} className="block hover:text-blue-400">Login</Link>
+                    <Link to={"/login"} onClick={() => setIsOpen(false)} className="block hover:text-blue-400">Login</Link>
                 </div>
             )}
         </div>
