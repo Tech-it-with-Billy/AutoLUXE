@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "../Index.css";
+import "../index.css";
 import {Menu, X} from "lucide-react";
 import {Link} from "react-router-dom";
 
