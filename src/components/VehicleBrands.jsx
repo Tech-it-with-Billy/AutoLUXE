@@ -1,6 +1,7 @@
 import React from "react";
 import "../index.css";
 import { Link } from "react-router-dom";
+import Type from "./Type";
 
 
 function VehicleBrands() {
@@ -14,18 +15,18 @@ function VehicleBrands() {
                 </Link>
             </div>
             <div className="grid grid-cols-6 gap-5 m-20">
-                <img className="w-50 h-30" src="/images/brands/toyota.png" alt="" />
-                <img className="w-50 h-30" src="/images/brands/ford.png" alt="" />
-                <img className="w-50 h-30" src="/images/brands/Tesla.png" alt="" />
-                <img className="w-50 h-30" src="/images/brands/vw.png" alt="" />
-                <img className="w-50 h-30" src="/images/brands/honda.png" alt="" />
-                <img className="w-50 h-30" src="/images/brands/nissan.png" alt="" />
-                <img className="w-50 h-30" src="/images/brands/chevi.png" alt="" />
-                <img className="w-50 h-30" src="/images/brands/bmw.png" alt="" />
-                <img className="w-50 h-30" src="/images/brands/mercedes.png" alt="" />
-                <img className="w-50 h-30" src="/images/brands/hyundai.png" alt="" />
-                <img className="w-50 h-30" src="/images/brands/audi.png" alt="" />
-                <img className="w-50 h-30" src="/images/brands/kia.png" alt="" />
+                <Type image="/images/brands/toyota.png" />
+                <Type image="/images/brands/ford.png" />
+                <Type image="/images/brands/Tesla.png" />
+                <Type image="/images/brands/vw.png" />
+                <Type image="/images/brands/honda.png" />
+                <Type image="/images/brands/nissan.png" />
+                <Type image="/images/brands/chevi.png" />
+                <Type image="/images/brands/bmw.png" />
+                <Type image="/images/brands/mercedes.png" />
+                <Type image="/images/brands/hyundai.png" />
+                <Type image="/images/brands/audi.png" />
+                <Type image="/images/brands/kia.png" />
             </div>
         </div>
     )

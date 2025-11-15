@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 
 function ProductCard ({image, name, cost, engine, seats, transmission, gasType}) {
     return (
-        <div className="bg-white border-2 border-white rounded-lg p-4 w-80 flex flex-col gap-2 m-4 text-sm">
+        <div className="bg-white border-2 border-white rounded-lg p-4 w-62 lg:w-75 flex flex-col gap-2 m-3 text-sm">
             <img className="w-full h-40 object-cover rounded-md mb-4" src={image} alt={name} />
             <h2 className="text-lg font-semibold mb-2">{name}</h2>
             <p className="text-gray-600 mb-2">{cost} per day</p>
-            <div className="flex flex-row w-55  justify-between">
+            <div className="flex flex-row w-55 lg:w-65 justify-between">
                 <div>
                     <img src="/images/cc.png" alt="" />
                     <p>{engine} cc</p>
@@ -27,7 +27,7 @@ function ProductCard ({image, name, cost, engine, seats, transmission, gasType})
                     <p>{gasType}</p>
                 </div>
             </div>
-            <Link to={'/checkout'}><button className="border-1 w-70 justify-center rounded-lg hover:border-3 border-black-500">Rent Now</button></Link>
+            <Link to={'/checkout'}><button className="border-1 w-55 lg:w-65 justify-center rounded-lg hover:border-3 border-black-500">Rent Now</button></Link>
         </div>
     )
 }

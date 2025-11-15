@@ -1,6 +1,7 @@
 import React from "react";
 import "../index.css";
 import { Link } from "react-router-dom";
+import Type from "./Type";
 
 function VehicleBodyType() {
     return (
@@ -13,18 +14,18 @@ function VehicleBodyType() {
                 </Link>
             </div>
             <div className="grid grid-cols-6 gap-5 m-20">
-                <img className="w-50 h-30" src="/images/bodytype/suv.png" alt="" />
-                <img className="w-50 h-30" src="/images/bodytype/crossover.png" alt="" />
-                <img className="w-50 h-30" src="/images/bodytype/wagon.png" alt="" />
-                <img className="w-50 h-30" src="/images/bodytype/family.png" alt="" />
-                <img className="w-50 h-30" src="/images/bodytype/sports.png" alt="" />
-                <img className="w-50 h-30" src="/images/bodytype/compact.png" alt="" />
-                <img className="w-50 h-30" src="/images/bodytype/coup.png" alt="" />
-                <img className="w-50 h-30" src="/images/bodytype/truck.png" alt="" />
-                <img className="w-50 h-30" src="/images/bodytype/sedan.png" alt="" />
-                <img className="w-50 h-30" src="/images/bodytype/lemo.png" alt="" />
-                <img className="w-50 h-30" src="/images/bodytype/convertible.png" alt="" />
-                <img className="w-50 h-30" src="/images/bodytype/crossover.png" alt="" />
+                <Type image="/images/bodytype/suv.png" />
+                <Type image="/images/bodytype/crossover.png" />
+                <Type image="/images/bodytype/wagon.png" />
+                <Type image="/images/bodytype/family.png" />
+                <Type image="/images/bodytype/sports.png" />
+                <Type image="/images/bodytype/compact.png" />
+                <Type image="/images/bodytype/coup.png" />
+                <Type image="/images/bodytype/truck.png" />
+                <Type image="/images/bodytype/sedan.png" />
+                <Type image="/images/bodytype/lemo.png" />
+                <Type image="/images/bodytype/convertible.png" />
+                <Type image="/images/bodytype/crossover.png" />
             </div>
         </div>
     )

@@ -7,8 +7,8 @@ function Contact () {
     return (
         <div className="h-screen bg-black">
             <NavBar />
-            <div className="flex flex-row items-center justify-center h-5/6">
-                <div className="flex flex-row bg-white w-250 h-150 items-center justify-center rounded-xl">
+            <div className="flex items-center justify-center h-5/6">
+                <div className="flex flex-col lg:flex-row bg-white w-120 lg:w-240 h-150 gap-10 items-center justify-center rounded-xl">
                     <div className="flex flex-col w-100 gap-2">
                         <h1 className="text-3xl font-bold">Get in touch</h1>
                         <div>
@@ -23,7 +23,7 @@ function Contact () {
                             <p>Address:</p>
                             <p>1234 Nairobi, Kenya</p>
                         </div>
-                        <div>
+                        <div className=" flex flex-col gap-1">
                             <p>Follow us</p>
                             <div className="flex gap-4 w-35 items-center justify-center rounded-xl bg-black">
                                 <img src="/images/ig.png" alt="" />
