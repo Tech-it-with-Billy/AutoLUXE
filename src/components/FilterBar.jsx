@@ -23,7 +23,7 @@ function FilterBar () {
                     <input className="justify-around bg-white p-1 rounded-xl w-40" type="date" id="date" name="date" />
                 </div>
                 <Link to={'/listings'}>
-                    <button className="justify-around bg-black text-white p-1 rounded-2xl w-40" type="submit">Find your ride </button>
+                    <button className="justify-around bg-black hover:border-3 border-purple-500 text-white p-1 rounded-2xl w-40" type="submit">Find your ride </button>
                 </Link>
             </form>
         </div>

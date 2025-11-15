@@ -12,11 +12,11 @@ function VehicleListings() {
                 <p>Ranging from elegant sedans to powerful sports cars, all carefully selected<br /> to provide our customers with the ultimate driving experience.</p>
             </div>
             <div className="flex gap-4">
-                <Link to={'/listings'}><button className="justify-around bg-black text-white p-1 rounded-2xl w-40">Popular Cars</button></Link>
-                <Link to={'/listings'}><button className="justify-around bg-black text-white p-1 rounded-2xl w-40">Luxury Cars</button></Link>
-                <Link to={'/listings'}><button className="justify-around bg-black text-white p-1 rounded-2xl w-40">Vintage Cars</button></Link>
-                <Link to={'/listings'}><button className="justify-around bg-black text-white p-1 rounded-2xl w-40">Family Cars</button></Link>
-                <Link to={'/listings'}><button className="justify-around bg-black text-white p-1 rounded-2xl w-40">Off-road Cars</button></Link>
+                <Link to={'/listings'}><button className="justify-around bg-black text-white p-1 rounded-2xl w-40 hover:border-3 border-purple-500">Popular Cars</button></Link>
+                <Link to={'/listings'}><button className="justify-around bg-black text-white p-1 rounded-2xl w-40 hover:border-3 border-purple-500">Luxury Cars</button></Link>
+                <Link to={'/listings'}><button className="justify-around bg-black text-white p-1 rounded-2xl w-40 hover:border-3 border-purple-500">Vintage Cars</button></Link>
+                <Link to={'/listings'}><button className="justify-around bg-black text-white p-1 rounded-2xl w-40 hover:border-3 border-purple-500">Family Cars</button></Link>
+                <Link to={'/listings'}><button className="justify-around bg-black text-white p-1 rounded-2xl w-40 hover:border-3 border-purple-500">Off-road Cars</button></Link>
             </div>
             <div>
                 <div className="grid grid-cols-3 gap-10 m-1">
@@ -35,7 +35,7 @@ function VehicleListings() {
                 </div>
             </div>
             <Link to={'/listings'}>
-                <button className=" justify-around bg-black text-white w-60 p-1 rounded-2xl w-40">See all Cars</button>
+                <button className="relative justify-around bg-black text-white w-60 p-1 rounded-2xl w-40 hover:border-3 border-purple-500">See all Cars</button>
             </Link>
         </div>
     );

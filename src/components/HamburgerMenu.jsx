@@ -8,7 +8,7 @@ function HamburgerMenu() {
     const [isOpen, setIsOpen] = React.useState(false);
     
     return (
-        <div className="Relative">
+        <div className="Relative hover:border-2 border-white rounded-lg">
             <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white"

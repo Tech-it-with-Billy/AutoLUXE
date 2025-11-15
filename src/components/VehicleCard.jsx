@@ -27,7 +27,7 @@ function ProductCard ({image, name, cost, engine, seats, transmission, gasType})
                     <p>{gasType}</p>
                 </div>
             </div>
-            <Link to={'/checkout'}><button className="border-1 w-70 justify-center rounded-lg">Rent Now</button></Link>
+            <Link to={'/checkout'}><button className="border-1 w-70 justify-center rounded-lg hover:border-3 border-black-500">Rent Now</button></Link>
         </div>
     )
 }

@@ -9,7 +9,7 @@ function VehicleBrands() {
             <div className="flex flex-row justify-between m-20 mt-20">
                 <h1 className="text-xl font-bold">Rent by Brands</h1>
                 <Link to={'/listings'} className="flex">
-                    <button>View all</button>
+                    <button className="hover:text-blue-600">View all</button>
                     <img src="/images/arrowWhite.png" alt="" />
                 </Link>
             </div>
