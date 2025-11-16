@@ -1,16 +1,119 @@
-# React + Vite
+# AutoLuxe --- Premium Car Rental Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, scalable, and responsive car rental platform built with
+**React**, **Tailwind CSS**, and **React Router DOM**, designed to offer
+users a smooth experience for browsing cars, viewing details, and
+placing bookings --- with or without creating an account.
 
-Currently, two official plugins are available:
+AutoLuxe is currently in active development and will evolve into a
+full-scale production system featuring backend APIs, user
+authentication, payment integration, and an admin dashboard.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Project Overview
 
-## React Compiler
+AutoLuxe is a **car rental web application** that allows users to: -
+Browse an extensive list of available vehicles - View detailed
+information for each car - Book rides seamlessly (even without
+registration) - Create user accounts for a personalized experience -
+Access clean, modern, mobile-friendly interfaces - Enjoy fast navigation
+powered by React Router
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Tech Stack
 
-## Expanding the ESLint configuration
+### Frontend
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-   React
+-   React Router DOM
+-   Tailwind CSS
+-   fetch API
+-   Vercel
+
+### Planned Backend
+
+-   REST API for vehicles, bookings, users, admin, filtering
+-   Mobile payment API integration
+
+## ⭐ Key Features
+
+### Current Features
+
+-   Responsive UI
+-   Listings and vehicle cards
+-   Booking flow with form
+-   Login & registration
+-   Navigation with Hamburger Menu
+-   Reusable components
+-   Vercel deployment
+
+### Planned Features
+
+-   Full backend
+-   Payments
+-   Admin panel
+-   Authentication
+-   Advanced filtering
+
+## 📁 Folder Structure
+
+    src/
+     ├─ components/
+     │   ├─ About.jsx
+     │   ├─ AllListings.jsx
+     │   ├─ Banner.jsx
+     │   ├─ BookingSummary.jsx
+     │   ├─ Checkout.jsx
+     │   ├─ Contact.jsx
+     │   ├─ FilterBar.jsx
+     │   ├─ Footer.jsx
+     │   ├─ HamburgerMenu.jsx
+     │   ├─ Home.jsx
+     │   ├─ Login.jsx
+     │   ├─ NavBar.jsx
+     │   ├─ Procedure.jsx
+     │   ├─ products.js
+     │   ├─ Register.jsx
+     │   ├─ Reviews.jsx
+     │   ├─ Services.jsx
+     │   ├─ Type.jsx
+     │   ├─ VehicleBodyType.jsx
+     │   ├─ VehicleBrands.jsx
+     │   ├─ VehicleCard.jsx
+     │   └─ VehicleListings.jsx
+
+## 🌐 Live Demo
+
+(Add your Vercel link here)
+
+## 📦 Installation
+
+    git clone <repo>
+    cd AutoLuxe
+    npm install
+    npm run dev
+
+## 📡 Planned API Endpoints
+
+### Vehicles
+
+    GET /api/vehicles
+    GET /api/vehicles/:id
+    POST /api/vehicles
+    PATCH /api/vehicles/:id
+    DELETE /api/vehicles/:id
+
+### Bookings
+
+    POST /api/bookings
+    GET /api/bookings/:userId
+
+### Auth
+
+    POST /api/auth/register
+    POST /api/auth/login
+
+## 📌 Roadmap
+
+-   Frontend UI (current)
+-   Backend development
+-   Payment integration
+-   Deployment pipeline
