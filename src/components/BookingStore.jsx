@@ -5,17 +5,12 @@ export const useBookingStore = create((set) => ({
 
     bookingDetails: {
         name: "",
-        emil: "",
+        email: "",
         address: "",
         pickupLocation: "",
         startDate: "",
         returnDate: "",
-        payment: {
-            cardNumber: "",
-            cardHolder: "",
-            expiry: "",
-            cvv: "",
-        }
+        payment: ""
     },
 
     setVehicle: (vehicle) => set({vehicle}),
@@ -38,12 +33,7 @@ export const useBookingStore = create((set) => ({
                 pickupLocation: "",
                 startDate: "",
                 returnDate: "",
-                payment: {
-                    cardNumber: "",
-                    cardHolder: "",
-                    expiry: "",
-                    cvv: ""
-                }
+                payment: ""
             }
         })
 }))

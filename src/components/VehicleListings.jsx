@@ -4,6 +4,7 @@ import VehicleCard from "./VehicleCard";
 import { products } from "./products";
 import { Link } from "react-router-dom";
 
+
 function VehicleListings() {
     return (
         <div className="flex flex-col gap-10 p-6 justify-center items-center bg-gray-100">
@@ -20,16 +21,10 @@ function VehicleListings() {
             </div>
             <div>
                 <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 m-1 md:gap-10">
-                    {products.map((product, index) => (
+                    {products.map(vehicle => (
                         <VehicleCard 
-                            key={index}
-                            image={product.image}
-                            name={product.name}
-                            cost={product.cost}
-                            engine={product.engine}
-                            seats={product.seats}
-                            transmission={product.transmission}
-                            gasType={product.gasType} 
+                            key={vehicle.id}
+                            vehicle= {vehicle}
                         />
                     ))}
                 </div>
