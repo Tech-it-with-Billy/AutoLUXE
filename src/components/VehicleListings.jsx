@@ -29,7 +29,7 @@ function VehicleListings() {
                             engine={product.engine}
                             seats={product.seats}
                             transmission={product.transmission}
-                            gasType={product.gasType}
+                            gasType={product.gasType} 
                         />
                     ))}
                 </div>
