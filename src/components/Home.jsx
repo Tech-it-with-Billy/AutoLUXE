@@ -2,6 +2,8 @@ import React from 'react'
 import NavBar from './navbar'
 import Banner from './Banner'
 import FilterBar from './FilterBar'
+import VehicleBrands from './VehicleBrands'
+import VehicleBodyType from './VehicleBodyType'
 
 function Home() {
     return (
@@ -9,8 +11,10 @@ function Home() {
             <NavBar />
             <Banner />
             <FilterBar />
+            <VehicleBrands />
+            <VehicleBodyType />
         </div>
     )
 }
 
-export default Home
+export default Home;
