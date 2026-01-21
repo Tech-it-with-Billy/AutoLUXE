@@ -6,6 +6,9 @@ import VehicleBrands from './VehicleBrands'
 import VehicleBodyType from './VehicleBodyType'
 import Listings from './Listings'
 import Procedure from './Procedure'
+import Services from './Services'
+import Reviews from './Reviews'
+import Footer from './Footer'
 
 function Home() {
     return (
@@ -17,6 +20,9 @@ function Home() {
             <VehicleBodyType />
             <Listings />
             <Procedure />
+            <Services />
+            <Reviews />
+            <Footer />
         </div>
     )
 }
