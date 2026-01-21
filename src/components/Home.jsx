@@ -4,6 +4,7 @@ import Banner from './Banner'
 import FilterBar from './FilterBar'
 import VehicleBrands from './VehicleBrands'
 import VehicleBodyType from './VehicleBodyType'
+import Listings from './Listings'
 
 function Home() {
     return (
@@ -13,6 +14,7 @@ function Home() {
             <FilterBar />
             <VehicleBrands />
             <VehicleBodyType />
+            <Listings />
         </div>
     )
 }
