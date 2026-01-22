@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 function Banner() {
     return (
         <div
-            className='flex flex-col p-20 gap-10 h-130 w-full bg-no-repeat bg-black bg-right bg-contain text-white'
+            className='flex flex-col p-10 lg:p-20 gap-10 h-130 w-full bg-no-repeat bg-black bg-right bg-contain text-white'
             style={{backgroundImage: `url(${bannerImage})`}}
         >
             <h1 className="max-w-sm text-5xl font-sans font-bold">Discover the world on wheels with our car rental service</h1>
