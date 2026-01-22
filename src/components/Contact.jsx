@@ -9,8 +9,8 @@ function Contact () {
         <div className="h-screen bg-black">
             <NavBar />
             <div className="flex items-center justify-center h-5/6">
-                <div className="flex flex-col lg:flex-row bg-white w-120 lg:w-240 h-150 gap-10 items-center justify-center rounded-xl">
-                    <div className="flex flex-col w-100 gap-2">
+                <div className="flex flex-col w-5/6 md:w-5/6 lg:w-4/6 md:flex-row p-10 bg-white gap-10 items-center justify-center rounded-xl">
+                    <div className="flex flex-col w-full gap-2">
                         <h1 className="text-3xl font-bold">Get in touch</h1>
                         <div>
                             <p className="font-bold">Email:</p>
@@ -26,7 +26,7 @@ function Contact () {
                         </div>
                         <div className=" flex flex-col gap-1">
                             <p  className="font-bold">Follow us</p>
-                            <div className="flex gap-4 w-35 h-5 items-center justify-center rounded-xl bg-black">
+                            <div className="flex gap-4 w-40 h-5 items-center justify-center rounded-xl bg-black">
                                 <img src="/images/ig.png" alt="" />
                                 <img src="/images/web.png" alt="" />
                                 <img src="/images/x.png" alt="" />
@@ -34,24 +34,24 @@ function Contact () {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col w-100 gap-4">
+                    <div className="flex flex-col gap-4">
                         <form className="flex flex-col gap-5" action="submit">
-                            <div className="flex">
+                            <div className="flex gap-5">
                                 <div>
                                     <label htmlFor="name">Your name:</label>
-                                    <input className="border-1 rounded" type="text" id="name" name="name" required />
+                                    <input className="border-1 rounded w-full" type="text" id="name" name="name" required />
                                 </div>
                                 <div>
                                     <label htmlFor="email">Email address:</label>
-                                    <input className="border-1 rounded" type="email" id="email" name="email" required />
+                                    <input className="border-1 rounded w-full" type="email" id="email" name="email" required />
                                 </div>
                             </div>
                             <div className="flex flex-col">
                                 <label htmlFor="message">Message:</label>
-                                <textarea className="border-1 rounded w-95" id="message" name="message" rows="4" required></textarea>
+                                <textarea className="border-1 rounded" id="message" name="message" rows="4" required></textarea>
                             </div>
                             <div>
-                                <button type="submit" className="p-2 border-2 border-black rounded-3xl w-96 bg-black text-white">Submit</button>
+                                <button type="submit" className="p-2 border-2 border-black rounded-3xl w-full bg-black text-white">Submit</button>
                             </div>
                         </form>
                     </div>
