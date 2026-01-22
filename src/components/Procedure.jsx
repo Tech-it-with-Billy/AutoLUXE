@@ -1,16 +1,21 @@
-import React from 'react'
+import React from "react";
+import "../index.css";
+import bannerImage from "/images/cars/jeepbg.png";
 
-function Procedure() {
+const Procedure = () => {
     return (
-        <div className="m-10 flex flex-col gap-10">
-            <div className="text-center gap-10">
-                <h1 className="font-bold text-2xl">How it works</h1>
-                <p className="">Renting a luxury car has never been easier. Our streamlined process makes it simple for you<br /> to book and confirm your vehicle of choice online</p>
+        <div class="max-w-6xl mx-auto py-12 px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">How it works</h2>
+                <p class="text-gray-600 max-w-xl mx-auto">Renting a luxury car has never been easier...</p>
             </div>
-            <div className="flex flex-col lg:flex-row justify-center">
-                <div className="relative flex flex-col mt-5 gap-5 lg:max-w-150">
+
+            <div class="flex flex-col md:flex-row items-center justify-center">
+                
+                <div class="z-10 flex flex-col gap-6 md:-mr-24 w-full md:w-1/2">
+                
                     <div className="relative flex flex-row gap-5 border-1 rounded-xl max-w-full bg-white p-5">
-                        <div className="bg-gray-200 rounded max-w-25 h-20 flex items-center justify-center">
+                        <div className="bg-gray-200 rounded w-15 h-20 flex items-center justify-center">
                             <img src="/images/search.png" alt="" />
                         </div>
                         <div className="">
@@ -37,8 +42,14 @@ function Procedure() {
                         </div>
                     </div>
                 </div>
-                <div className="relative mt-20 ">
-                    <img src="/images/cars/jeep.png" alt="" />
+                <div class="relative w-full md:w-3/5 mt-12 md:mt-0">
+                    <div class="bg-gray-100 rounded-[40px] p-12 flex items-center justify-center min-h-[400px]">
+                        <img 
+                            src="/images/cars/jeep.png" 
+                            alt="Jeep Wrangler" 
+                            class="w-full h-auto drop-shadow-2xl"
+                        />
+                    </div>
                 </div>
             </div>
         </div>

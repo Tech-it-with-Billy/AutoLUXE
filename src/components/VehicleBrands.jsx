@@ -5,7 +5,7 @@ function VehicleBrands() {
     return (
         <div className='flex flex-col'>
             <div className='flex justify-between p-15'>
-                <h2>Rent by brand</h2>
+                <h2 className='text-lg font-bold'>Rent by brand</h2>
                 <button className='flex gap-3 items-center'>
                     View all
                     <img src="/images/ArrowBlack.png" alt="" className='h-3 ' />
