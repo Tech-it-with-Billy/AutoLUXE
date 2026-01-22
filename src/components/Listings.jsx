@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import VehicleCard from './VehicleCard';
 import { VehicleList } from './VehicleList';
 
@@ -7,7 +8,7 @@ function Listings() {
             <div className='flex flex-col gap-10 p-6 mt-5 justify-center items-center bg-gray-100'>
                 
                     <h2 className='text-2xl font-extrabold'>Our impressive collection of cars</h2>
-                    <p>Ranging from elegant sedans to powerful sports cars, all carefully selected to provide our customers with the ultimate driving experience.</p>
+                    <p className='text-center'>Ranging from elegant sedans to powerful sports cars, all carefully selected to provide our customers with the ultimate driving experience.</p>
                 
                 
                 <div className='grid grid-cols-2 md:flex  gap-5'>
@@ -22,10 +23,12 @@ function Listings() {
                         <VehicleCard vehicle={vehicle}/>
                     ))}
                 </div>
-                <button className='flex text-white bg-black w-50 justify-center p-1 gap-3 items-center rounded-2xl'>
-                    See all cars
-                    <img src="/images/arrowR.png" className='h-3' alt="" />
-                </button>
+                <Link to={'/vehicles'}>
+                    <button className='flex text-white bg-black w-50 justify-center p-1 gap-3 items-center rounded-2xl'>
+                        See all cars
+                        <img src="/images/arrowR.png" className='h-3' alt="" />
+                    </button>
+                </Link>
             </div>
     )
 }

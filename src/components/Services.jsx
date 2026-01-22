@@ -3,7 +3,7 @@ import "../index.css";
 
 function Services () {
     return (
-        <div className="flex flex-col bg-black text-white items-center text-center">
+        <div className="flex flex-col p-5 bg-black text-white items-center text-center">
             <div className="flex flex-col gap-4 m-10 max-w-sm">
                 <h1 className="text-2xl font-bold">Our services & Benefits</h1>
                 <p>Experience the best car rental services with AutoLUXE. We offer a wide range of luxury vehicles, competitive pricing, and exceptional customer service to ensure your satisfaction.</p>

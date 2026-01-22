@@ -19,7 +19,6 @@ function HamburgerMenu() {
                     <Link to={'/'} onClick={() => setIsOpen(false)}>Home</Link>
                     <Link to={'/about'} onClick={() => setIsOpen(false)}>About</Link>
                     <Link to={'/vehicles'} onClick={() => setIsOpen(false)}>Vehicles</Link>
-                    <Link to={'/bookings'} onClick={() => setIsOpen(false)}>Booking</Link>
                     <Link to={'/contact'} onClick={() => setIsOpen(false)}>Contact</Link>
                     <Link to={'/login'} onClick={() => setIsOpen(false)}>Login</Link>
                 </nav>

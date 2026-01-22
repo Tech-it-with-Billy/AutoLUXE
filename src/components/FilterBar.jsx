@@ -38,7 +38,7 @@ function FilterBar() {
                         name='drop-off-date' className='border rounded p-1 w-35'
                     />
                 </fieldset>
-                <Link to={'/cars'}>
+                <Link to={'/vehicles'}>
                     <button type='submit' className='flex text-white bg-black rounded-2xl w-40 h-10 items-center p-3 gap-2'>
                         Find you ride 
                         <img src="images/arrowR.png" className='h-3' alt="" />
