@@ -1,15 +1,19 @@
 import React from 'react'
+import '../index.css'
 import VehicleFilterIcon from './VehicleFilterIcon';
+import { Link } from 'react-router-dom';
 
 function VehicleBodyType() {
     return (
         <div className='flex flex-col'>
             <div className='flex justify-between p-15'>
                 <h2 className='text-lg font-bold'>Rent by body type</h2>
-                <button className='flex gap-3 items-center'>
-                    View all
-                    <img src="/images/ArrowBlack.png" alt="" className='h-3 ' />
-                </button>
+                <Link to={'/vehicles'}>
+                    <button className='flex gap-3 items-center'>
+                        View all
+                        <img src="/images/ArrowBlack.png" alt="" className='h-3 ' />
+                    </button>
+                </Link>
             </div>
             <div className='grid grid-cols-6 px-15 gap-5'>
                 <VehicleFilterIcon image='/images/bodytype/compact.png' />

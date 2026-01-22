@@ -8,7 +8,7 @@ function Footer () {
             <div className="relative h-30 w-30 flex items-center pl-5">
                 <Link to={'/'}><img className="object-cover" src="/images/logo.png" alt="" /></Link>
             </div>
-            <div className="flex flex-row items-center justify-center gap-3 font-l text-white text-xs md:text-lg">
+            <div className="flex flex-row items-center justify-center gap-3 font-l text-white text-xs md:text-sm">
                 <Link to={'/vehicles'}><p>Rent</p></Link>
                 <Link to={'/about'}><p>About</p></Link>
                 <Link to={'/contact'}><p>Contact</p></Link>

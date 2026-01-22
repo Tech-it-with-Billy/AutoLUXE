@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function VehicleCard({vehicle}) {
     return (
@@ -29,7 +30,7 @@ function VehicleCard({vehicle}) {
                     <p className='text-xs'>{vehicle.gasType}</p>
                 </div>
             </div>
-            <button className='border rounded-2xl'>Rent Now</button>
+            <Link to={'/booking-form'}><button className='border rounded-2xl w-full'>Rent Now</button></Link>
         </div>
     )
 }
