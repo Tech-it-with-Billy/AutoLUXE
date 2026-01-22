@@ -9,8 +9,8 @@ function BookingForm() {
         <div>
             <NavBar />
             <div className='flex justify-center items-center bg-black h-5/6'>
-                <div className='flex justify-center items-center bg-white border rounded-2xl w-5/6 md:w-4/6'>
-                    <form action="submit" className='flex flex-col gap-2 m-5 p-5'>
+                <div className='flex m-5 justify-center items-center bg-white border rounded-2xl w-5/6 md:w-4/6'>
+                    <form action="submit" className='flex flex-col gap-2 p-5 w-70 md:w-120'>
                         <fieldset className='flex flex-col'>
                             <label htmlFor="name" className='font-semibold'>Name:</label>
                             <input 
@@ -70,7 +70,7 @@ function BookingForm() {
                             <input 
                                 type="file" name='driving-license' 
                                 accept="image/*, .pdf, .doc, .docx" 
-                                className='border border rounded p-1'
+                                className='border rounded p-1 w-full text-sm'
                             />
                         </fieldset>
 
