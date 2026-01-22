@@ -10,7 +10,7 @@ function Reviews () {
                 </div>
                 <div className="flex flex-row gap-2 lg:gap-5 w-20 lg:w-40 h-10">
                     <img src="/images/arrowL.png" alt="" />
-                    <img src="/images/arrowR.png" alt="" />
+                    <img src="/images/arrowRBlack.png" alt="" />
                 </div>
             </div>
             <div>

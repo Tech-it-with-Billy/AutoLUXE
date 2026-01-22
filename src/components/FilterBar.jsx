@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function FilterBar() {
     return (
         <div className='flex justify-center items-center'>
-            <form action="submit" className='flex gap-5 items-center bg-gray-200 p-4 rounded-3xl -m-10'>
+            <form action="submit" className='grid grid-cols-2 md:flex gap-5 items-center bg-gray-200 p-4 rounded-3xl -m-10'>
                 <fieldset className='flex flex-col gap-2'>
                     <label htmlFor="pick-up-location">Pick-up Location</label>
                     <input 
