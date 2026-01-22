@@ -7,7 +7,9 @@ import { Link } from 'react-router-dom';
 function BookingSummary() {
     return (
         <div className="flex flex-col min-h-screen">
-            <NavBar />
+            <div className='relative z-50'>
+                <NavBar />
+            </div>
             <div className='relative flex justify-center items-center h-screen w-full overflow-hidden'>
                 <video 
                     autoPlay muted loop playsInline 
@@ -16,7 +18,7 @@ function BookingSummary() {
                     Your browser does not support the video tag.
                 </video>
 
-                <div className="relative z-10 flex flex-col items-center justify-center w-4/6 rounded-2xl h-5/6 bg-black/20 text-black">
+                <div className="relative z-10 flex flex-col items-center justify-center w-4/6 rounded-2xl h-5/6 bg-white/40 text-black">
                     <h1 className="text-4xl text-center font-bold">Booking Summary</h1>
                     <p className="mt-4 text-lg font-bold">Confirm your details below</p>
                     <div>

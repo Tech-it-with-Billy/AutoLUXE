@@ -8,9 +8,9 @@ function BookingForm() {
     return (
         <div>
             <NavBar />
-            <div className='flex justify-center items-center bg-black p-5 h-5/6'>
-                <div className='flex justify-center items-center bg-white border rounded-2xl p-5  w-4/6'>
-                    <form action="submit" className='flex flex-col gap-2'>
+            <div className='flex justify-center items-center bg-black h-5/6'>
+                <div className='flex justify-center items-center bg-white border rounded-2xl w-5/6 md:w-4/6'>
+                    <form action="submit" className='flex flex-col gap-2 m-5 p-5'>
                         <fieldset className='flex flex-col'>
                             <label htmlFor="name" className='font-semibold'>Name:</label>
                             <input 
