@@ -1,6 +1,6 @@
 import React from "react";
 import "../index.css";
-import NavBar from "./NavBar";
+import NavBar from "./navbar";
 import Services from "./Services";
 import Footer from "./Footer";
 
