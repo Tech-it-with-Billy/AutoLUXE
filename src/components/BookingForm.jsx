@@ -2,21 +2,34 @@ import React from 'react'
 import NavBar from './navbar';
 import Footer from './Footer'
 import locationIcon from '/images/Location.png'
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useBookingStore } from '../context/BookingStore';
 
 function BookingForm() {
+    const { bookingDetails, updateBookingDetails} = useBookingStore();
+
+    const navigate = useNavigate()
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        navigate('/booking-summary')
+    }
+
     return (
         <div>
             <NavBar />
             <div className='flex justify-center items-center bg-black h-5/6'>
                 <div className='flex m-5 justify-center items-center bg-white border rounded-2xl w-5/6 md:w-4/6'>
-                    <form action="submit" className='flex flex-col gap-2 p-5 w-70 md:w-120'>
+                    <form onSubmit={handleSubmit} className='flex flex-col gap-2 p-5 w-70 md:w-120'>
                         <fieldset className='flex flex-col'>
                             <label htmlFor="name" className='font-semibold'>Name:</label>
                             <input 
                                 type="text" id='name' name='name' 
                                 placeholder='Enter name' 
                                 className='border border rounded p-1'
+                                value={bookingDetails.name}
+                                onChange={(e) => updateBookingDetails({name: e.target.value})}
+                                required
                             />
                         </fieldset>
                         
@@ -26,6 +39,9 @@ function BookingForm() {
                                 type="email" id='email' name='email' 
                                 placeholder='Enter email' 
                                 className='border border rounded p-1'
+                                value={bookingDetails.email}
+                                onChange={(e) => updateBookingDetails({email: e.target.value})}
+                                required
                             />
                         </fieldset>
 
@@ -34,6 +50,9 @@ function BookingForm() {
                             <input 
                                 type="date" id='start-date' 
                                 className='border border rounded p-1'
+                                value={bookingDetails.from}
+                                onChange={(e) => updateBookingDetails({from: e.target.value})}
+                                required
                             />
                         </fieldset>
 
@@ -42,6 +61,9 @@ function BookingForm() {
                             <input 
                                 type="date" id='return-date' 
                                 className='border border rounded p-1'
+                                value={bookingDetails.to}
+                                onChange={(e) => updateBookingDetails({to: e.target.value})}
+                                required
                             />
                         </fieldset>
 
@@ -52,6 +74,9 @@ function BookingForm() {
                                 name='pick-up-location' placeholder='Search' 
                                 className='border rounded p-1 bg-no-repeat bg-left pl-6'
                                 style={{backgroundImage: `url(${locationIcon})`}}
+                                value={bookingDetails.pick_up}
+                                onChange={(e) => updateBookingDetails({pick_up: e.target.value})}
+                                required
                             />
                         </fieldset>
 
@@ -62,21 +87,13 @@ function BookingForm() {
                                 name='drop-off-location' placeholder='Search' 
                                 className='border rounded p-1 bg-no-repeat bg-left pl-6'
                                 style={{backgroundImage: `url(${locationIcon})`}}
+                                value={bookingDetails.drop_off}
+                                onChange={(e) => updateBookingDetails({drop_off: e.target.value})}
+                                required
                             />
                         </fieldset>
 
-                        <fieldset className='flex flex-col gap-2'>
-                            <label htmlFor="driving-license" className='font-semibold'>Driving License</label>
-                            <input 
-                                type="file" name='driving-license' 
-                                accept="image/*, .pdf, .doc, .docx" 
-                                className='border rounded p-1 w-full text-sm'
-                            />
-                        </fieldset>
-
-                        <Link to={'/booking-summary'}>
-                            <button className='border w-full rounded-2xl p-1 bg-black text-white'>Submit</button>
-                        </Link>
+                        <button type='submit' className='border w-full rounded-2xl p-1 bg-black text-white'>Submit</button>
                         
                     </form>
                 </div>

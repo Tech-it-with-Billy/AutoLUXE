@@ -1,7 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { useBookingStore } from '../context/BookingStore.jsx'
+import { useNavigate } from 'react-router-dom';
 
 function VehicleCard({vehicle}) {
+    const setVehicle = useBookingStore((state) => state.setVehicle)
+
+    const navigate = useNavigate()
+    
+    const handleSelectCar = () => {
+        setVehicle(vehicle)
+        navigate('/booking-form')
+    }
     return (
         <div className=' flex flex-col gap-3 p-2 max-w-60 lg:max-w-80 bg-white border border-none rounded-2xl'>
             <img src={vehicle.image} className='rounded-xl' alt="" />
@@ -30,7 +39,7 @@ function VehicleCard({vehicle}) {
                     <p className='text-xs'>{vehicle.gasType}</p>
                 </div>
             </div>
-            <Link to={'/booking-form'}><button className='border rounded-2xl w-full'>Rent Now</button></Link>
+            <button onClick={handleSelectCar} className='border rounded-2xl w-full'>Rent Now</button>
         </div>
     )
 }
