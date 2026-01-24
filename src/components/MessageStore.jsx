@@ -4,7 +4,7 @@ export const useMessageStore = create((set) => ({
     message: {
         name: '',
         email: '',
-        message: '',
+        message: ''
     },
 
     setMessage: (data) => 
@@ -19,7 +19,7 @@ export const useMessageStore = create((set) => ({
             message: {
                 name: '',
                 email: '',
-                message: '',
+                message: ''
             },
         })
 
