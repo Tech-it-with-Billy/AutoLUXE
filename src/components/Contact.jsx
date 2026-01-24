@@ -3,7 +3,7 @@ import "../index.css";
 import NavBar from "./navbar";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
-import { useMessageStore } from "./MessageStore";
+import { useMessageStore } from "../context/MessageStore";
 
 
 function Contact () {
