@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import { useMessageStore } from "./MessageStore";
 
+
 function Contact () {
     const { message, setMessage, resetMessage } = useMessageStore();
 
