@@ -2,8 +2,38 @@ import React from "react";
 import "../index.css";
 import NavBar from "./navbar";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
+import { useMessageStore } from "./MessageStore";
+
 
 function Contact () {
+    const { message, setMessage, resetMessage } = useMessageStore();
+
+    async function handleMessage() {
+        if (!message.name || !message.email || !message.message) return;
+
+        const payload = message;
+
+
+        try {
+            const response = await fetch('/message', {
+                method: 'POST',
+                headers: { "Content-Type": "application/json"},
+                body: JSON.stringify(payload)
+            })
+
+            if (!response.ok) {
+                throw new Error('Failed to post the Message')
+            }
+
+            const data = await response.json()
+
+            resetMessage();
+            alert('Message sent successfully!')
+        } catch (error) {
+            console.error(error || 'Error sending message, please try again.')
+        }
+    }
     return (
         <div className="h-screen bg-black">
             <NavBar />
@@ -34,20 +64,38 @@ function Contact () {
                         </div>
                     </div>
                     <div className="flex flex-col gap-4">
-                        <form className="flex flex-col gap-5" action="submit">
+                        <form onSubmit={handleMessage} className="flex flex-col gap-5" action="submit">
                             <div className="flex gap-5">
                                 <div>
                                     <label htmlFor="name">Your name:</label>
-                                    <input className="border-1 rounded w-full" type="text" id="name" name="name" required />
+                                    <input 
+                                        className="border-1 rounded w-full" 
+                                        type="text" id="name" name="name" 
+                                        value={message.name}
+                                        onChange={(e) => setMessage({name: e.target.value})}
+                                        required 
+                                    />
                                 </div>
                                 <div>
                                     <label htmlFor="email">Email address:</label>
-                                    <input className="border-1 rounded w-full" type="email" id="email" name="email" required />
+                                    <input 
+                                        className="border-1 rounded w-full" 
+                                        type="email" id="email" name="email" 
+                                        value={message.email}
+                                        onChange={(e) => setMessage({email: e.target.value})}
+                                        required 
+                                    />
                                 </div>
                             </div>
                             <div className="flex flex-col">
                                 <label htmlFor="message">Message:</label>
-                                <textarea className="border-1 rounded" id="message" name="message" rows="4" required></textarea>
+                                <textarea 
+                                    className="border-1 rounded" 
+                                    id="message" name="message" rows="4"
+                                    value={message.message}
+                                    onChange={(e) => setMessage({message: e.target.value})}
+                                    required 
+                                />
                             </div>
                             <div>
                                 <button type="submit" className="p-2 border-2 border-black rounded-3xl w-full bg-black text-white">Submit</button>
