@@ -11,6 +11,7 @@ import SignUp from './components/SignUp.jsx'
 import BookingForm from './components/BookingForm.jsx'
 import BookingSummary from './components/BookingSummary.jsx'
 import AdminLogin from './components/Admin/AdminLogin.jsx'
+import NavBar from './components/Admin/NavBar.jsx'
 
 const router = createBrowserRouter([
   {path: '/', element: <App />},
@@ -21,7 +22,8 @@ const router = createBrowserRouter([
   {path: '/signup', element: <SignUp />},
   {path: '/booking-form', element: <BookingForm />},
   {path: '/booking-summary', element: <BookingSummary />},
-  {path: '/admin-login', element: <AdminLogin />}
+  {path: '/admin-login', element: <AdminLogin />},
+  {path: '/admin-navbar', element: <NavBar />}
 ])
 
 createRoot(document.getElementById('root')).render(
