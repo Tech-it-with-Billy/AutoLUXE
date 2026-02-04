@@ -10,6 +10,7 @@ import Login from './components/Login.jsx'
 import SignUp from './components/SignUp.jsx'
 import BookingForm from './components/BookingForm.jsx'
 import BookingSummary from './components/BookingSummary.jsx'
+import AdminLogin from './components/Admin/AdminLogin.jsx'
 
 const router = createBrowserRouter([
   {path: '/', element: <App />},
@@ -19,7 +20,8 @@ const router = createBrowserRouter([
   {path: '/login', element: <Login />},
   {path: '/signup', element: <SignUp />},
   {path: '/booking-form', element: <BookingForm />},
-  {path: '/booking-summary', element: <BookingSummary />}
+  {path: '/booking-summary', element: <BookingSummary />},
+  {path: '/admin-login', element: <AdminLogin />}
 ])
 
 createRoot(document.getElementById('root')).render(
