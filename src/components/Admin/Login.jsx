@@ -19,7 +19,7 @@ function Login() {
                         <input className="border-1 w-70 block mb-4 p-2 rounded-md" type="email" id="email" name="email" required />
                         <label htmlFor="password">Password*</label>
                         <input className="border-1 w-70 block mb-4 p-2 rounded-md" type="password" id="password" name="password" required />
-                        <Link to={'/admin-navbar'}>
+                        <Link to={'/admin-dashboard'}>
                             <button className="w-70 bg-black text-white p-3 rounded-3xl mt-2" type="submit">Login</button>
                         </Link>
                         

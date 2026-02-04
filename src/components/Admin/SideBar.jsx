@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 
 function SideBar() {
     return (
-        <div className='flex m-5 text-white font-bold'>
-            <div className='flex flex-col gap-5 '>
-                <Link>DashBoard</Link>
+        <div className='flex text-white font-bold bg-black'>
+            <div className='flex flex-col gap-5 p-10 border h-screen'>
+                <Link to={'/admin-dashboard'}>DashBoard</Link>
                 <Link>Fleet Manager</Link>
                 <Link>Bookings</Link>
                 <Link>Inventory</Link>
