@@ -2,8 +2,12 @@ import React from 'react'
 import '../../index.css'
 import NavBar from './AdminNavBar';
 import SideBar from './SideBar';
+import { useVehicleStore } from '../../context/VehicleStore';
 
-    function FleetManager() {
+function FleetManager() {
+    const { vehicle, updateVehicleData } = useVehicleStore();
+
+
     return (
         <div>
             <NavBar />
@@ -25,6 +29,8 @@ import SideBar from './SideBar';
                                         type="text" id='make' name='make' 
                                         placeholder='Enter vehicle make' 
                                         className='border rounded p-1 text-xs w-50'
+                                        value={vehicle.make}
+                                        onChange={(e) => updateVehicleData({make: e.target.value})}
                                         required
                                     />
                                 </fieldset>
@@ -34,6 +40,8 @@ import SideBar from './SideBar';
                                         type="text" id='model' name='model' 
                                         placeholder='Enter model' 
                                         className='border rounded p-1 text-xs w-50'
+                                        value={vehicle.model}
+                                        onChange={(e) => updateVehicleData({model: e.target.value})}
                                         required
                                     />
                                 </fieldset> 
@@ -43,6 +51,8 @@ import SideBar from './SideBar';
                                         type="text" id='body' name='body' 
                                         placeholder='Body type' 
                                         className='border rounded p-1 text-xs w-50'
+                                        value={vehicle.body}
+                                        onChange={(e) => updateVehicleData({body_type: e.target.value})}
                                         required
                                     />
                                 </fieldset> 
@@ -52,6 +62,8 @@ import SideBar from './SideBar';
                                         type="text" id='year' name='year' 
                                         placeholder='Year of manufacture' 
                                         className='border rounded p-1 text-xs w-50'
+                                        value={vehicle.year}
+                                        onChange={(e) => updateVehicleData({year: e.target.value})}
                                         required
                                     />
                                 </fieldset> 
@@ -61,6 +73,8 @@ import SideBar from './SideBar';
                                         type="text" id='cost' name='cost' 
                                         placeholder='Enter price' 
                                         className='border rounded p-1 text-xs w-50'
+                                        value={vehicle.cost}
+                                        onChange={(e) => updateVehicleData({cost: e.target.value})}
                                         required
                                     />
                                 </fieldset> 
@@ -70,6 +84,8 @@ import SideBar from './SideBar';
                                         type="text" id='cc' name='cc' 
                                         placeholder='cc' 
                                         className='border rounded p-1 text-xs w-50'
+                                        value={vehicle.cc}
+                                        onChange={(e) => updateVehicleData({engine: e.target.value})}
                                         required
                                     />
                                 </fieldset> 
@@ -78,11 +94,19 @@ import SideBar from './SideBar';
                                     <div className='flex gap-2'>
                                         <div className='flex items-center gap-1'>
                                             <label htmlFor="automatic">Automatic</label>
-                                            <input id="automatic" type="radio" name="gearbox" value="automatic" />
+                                            <input 
+                                                id="automatic" type="radio" name="gearbox" value="automatic" 
+                                                onChange={(e) => updateVehicleData({gearbox: e.target.value})}
+                                                className="cursor-pointer"
+                                            />
                                         </div>
                                         <div  className='flex items-center gap-1'>
                                             <label htmlFor="manual">Manual</label>
-                                            <input id="manual" type="radio" name="gearbox" value="manual" />
+                                            <input 
+                                                id="manual" type="radio" name="gearbox" value="manual" 
+                                                onChange={(e) => updateVehicleData({gearbox: e.target.value})}
+                                                className="cursor-pointer"
+                                            />
                                         </div>
                                     </div>
                                 </fieldset>
@@ -92,15 +116,19 @@ import SideBar from './SideBar';
                                         type="number" id='seats' name='seats' 
                                         placeholder='Capacity' 
                                         className='border rounded p-1 text-xs w-50'
+                                        value={vehicle.seats}
+                                        onChange={(e) => updateVehicleData({seats: e.target.value})}
                                         required
                                     />
                                 </fieldset> 
                                 <fieldset className='flex justify-between'>
                                     <label htmlFor="gas-type" className='font-semibold'>Gas type</label>
                                     <input 
-                                        type="number" id='gas-type' name='gas-type' 
+                                        type="text" id='gas-type' name='gas-type' 
                                         placeholder='Petrol or Diesel' 
                                         className='border rounded p-1 text-xs w-50'
+                                        value={vehicle.gas_type}
+                                        onChange={(e) => updateVehicleData({gas_type: e.target.value})}
                                         required
                                     />
                                 </fieldset> 
