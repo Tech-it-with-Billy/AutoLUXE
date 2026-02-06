@@ -5,7 +5,46 @@ import SideBar from './SideBar';
 import { useVehicleStore } from '../../context/VehicleStore';
 
 function FleetManager() {
-    const { vehicle, updateVehicleData } = useVehicleStore();
+    const { vehicle, updateVehicleData, addImage, removeImage, resetVehicle } = useVehicleStore();
+
+    const handleImageChange = (e) => {
+        const files = Array.from(e.target.files);
+        files.forEach((file) =>  addImage(file));
+        e.target.value = null;
+    }
+
+    async function handleSubmit(e) {
+        e.preventDefault();
+
+        const formData = new FormData();
+
+        Object.entries(vehicle).forEach(([key, value]) => {
+            if (key !== 'images') {
+                formData.append(key, value);
+            }
+        });
+
+        vehicle.images.forEach((image) => {
+            formData.append('images', image);
+        });
+
+        try {
+            const response = await fetch('url', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to submit Vehicle')
+            }
+            resetVehicle();
+            alert('Vehicle submitted successfully!')
+        } catch (error) {
+            console.error(error)
+            alert('Something went wrong')
+        }
+        
+    }  
 
 
     return (
@@ -132,7 +171,32 @@ function FleetManager() {
                                         required
                                     />
                                 </fieldset> 
-                                <button className='mt-7 border rounded-2xl'>+ Submit new Vehicle</button>
+                                <fieldset className='flex justify-between'>
+                                    <label htmlFor="image" className='font-semibold'>Upload  Images</label>
+                                    <input 
+                                        type="file" id='image' name='image'
+                                        multiple accept='image/*'
+                                        className='border rounded p-1 text-xs w-50'
+                                        onChange={handleImageChange}
+                                    />
+                                </fieldset>
+                                <div className='flex gap-3'>
+                                    {vehicle.images.map((file, index) => (
+                                        <div key={index}>
+                                            <img 
+                                                src={URL.createObjectURL(file)}
+                                                alt='preview'
+                                                width={60}
+                                                height={40}
+                                                style={{objectFit: 'cover'}}
+                                            />
+                                            <button type='button' onClick={() => removeImage(index)}>Remove</button>
+                                        </div>
+                                    ))}
+                                </div>
+                                <button type='submit' className='mt-7 border rounded-2xl'>
+                                    + Submit new Vehicle
+                                </button>
                             </form>
                         </div>
                     </div>

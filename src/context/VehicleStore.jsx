@@ -11,13 +11,29 @@ export const useVehicleStore = create((set) => ({
         gearbox: '',
         seats: '',
         gas_type: '',
-        images: null
+        images: []
     },
 
     updateVehicleData: (data) =>
         set((state) => ({
             vehicle: {
                 ...state.vehicle, ...data
+            }
+        })),
+    
+    addImage: (image) =>
+        set((state) => ({
+            vehicle: {
+                ...state.vehicle,
+                images: [...state.vehicle.images, image]
+            }
+        })),
+    
+    removeImage: (index) =>
+        set((state) => ({
+            vehicle: {
+                ...state.vehicle,
+                images: state.vehicle.images.filter((_, i) => i !== index)
             }
         })),
     
@@ -33,7 +49,7 @@ export const useVehicleStore = create((set) => ({
                 transmission: '',
                 seats: '',
                 gas_type: '',
-                images: null
+                images: []
             }
         }),
 }))
