@@ -50,7 +50,7 @@ function FleetManager() {
     return (
         <div>
             <NavBar />
-            <div className='flex h-screen bg-black overflow-hidden'>
+            <div className='flex bg-black overflow-hidden'>
                 <SideBar />
                 <div className='flex-1 bg-black border text-white'>
                     <div className=' flex flex-col m-20 gap-10'>
