@@ -61,7 +61,7 @@ function FleetManager() {
                         <div className='border p-5'>
                             <h3 className='text-2xl font-bold'>Register New Vehicle</h3>
                             <hr />
-                            <form action="submit" className='flex flex-col mt-5 gap-2 w-90'>
+                            <form onSubmit={handleSubmit} className='flex flex-col mt-5 gap-2 w-90'>
                                 <fieldset className='flex justify-between'>
                                     <label htmlFor="make" className='font-semibold'>Make</label>
                                     <input 
