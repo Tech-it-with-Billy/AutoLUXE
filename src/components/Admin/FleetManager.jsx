@@ -29,7 +29,7 @@ function FleetManager() {
         });
 
         try {
-            const response = await fetch('http://127.0.0.1:8000/vehicles/create/', {
+            const response = await fetch('https://autoluxe-api-v1-1.onrender.com/vehicles/create/', {
                 method: 'POST',
                 body: formData
             });
