@@ -24,9 +24,7 @@ function FleetManager() {
             }
         });
 
-        vehicle.images.forEach((image) => {
-            formData.append('images', image);
-        });
+        vehicle.images.forEach((image) => formData.append('images', image));
 
         try {
             const response = await fetch('https://autoluxe-api-v1-1.onrender.com/vehicles/create/', {
@@ -35,15 +33,18 @@ function FleetManager() {
             });
 
             if (!response.ok) {
-                const errorData = await response.json();
-                console.log(errorData);
+                const errorData = isJson ? await response.json() : await response.text();
+                console.log('Backend Error:', errorData);
                 throw new Error('Failed to submit Vehicle');
             }
+
+            const data = isJson ? await response.json() : await response.text();
+            console.log('Vehicle created:', data);
 
             resetVehicle();
             alert('Vehicle submitted successfully!')
         } catch (error) {
-            console.error(error)
+            console.error('Fetch error:', error)
             alert('Something went wrong')
         }
         
