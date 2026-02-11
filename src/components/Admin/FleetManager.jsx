@@ -34,9 +34,8 @@ function FleetManager() {
                 body: formData
             });
 
-            if (!response.ok) {
-                throw new Error('Failed to submit Vehicle')
-            }
+            if (!response.ok) throw new Error('Failed to submit Vehicle')
+
             resetVehicle();
             alert('Vehicle submitted successfully!')
         } catch (error) {
@@ -134,16 +133,16 @@ function FleetManager() {
                                         <div className='flex items-center gap-1'>
                                             <label htmlFor="automatic">Automatic</label>
                                             <input 
-                                                id="automatic" type="radio" name="gearbox" value="automatic" 
-                                                onChange={(e) => updateVehicleData({gearbox: e.target.value})}
+                                                id="automatic" type="radio" name="transmission" value="automatic" 
+                                                onChange={(e) => updateVehicleData({transmission: e.target.value})}
                                                 className="cursor-pointer"
                                             />
                                         </div>
                                         <div  className='flex items-center gap-1'>
                                             <label htmlFor="manual">Manual</label>
                                             <input 
-                                                id="manual" type="radio" name="gearbox" value="manual" 
-                                                onChange={(e) => updateVehicleData({gearbox: e.target.value})}
+                                                id="manual" type="radio" name="transmission" value="manual" 
+                                                onChange={(e) => updateVehicleData({transmission: e.target.value})}
                                                 className="cursor-pointer"
                                             />
                                         </div>

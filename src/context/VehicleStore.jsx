@@ -8,7 +8,7 @@ export const useVehicleStore = create((set) => ({
         year: '',
         cost: '',
         engine: '',
-        gearbox: '',
+        transmission: '',
         seats: '',
         gas_type: '',
         images: []
