@@ -34,7 +34,11 @@ function FleetManager() {
                 body: formData
             });
 
-            if (!response.ok) throw new Error('Failed to submit Vehicle')
+            if (!response.ok) {
+                const errorData = await response.json();
+                console.log(errorData);
+                throw new Error('Failed to submit Vehicle');
+            }
 
             resetVehicle();
             alert('Vehicle submitted successfully!')
