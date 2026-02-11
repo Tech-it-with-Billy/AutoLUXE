@@ -32,6 +32,9 @@ function FleetManager() {
                 body: formData
             });
 
+            const contentType = response.headers.get('content-type') || '';
+            const isJson = contentType.includes('application/json');
+
             if (!response.ok) {
                 const errorData = isJson ? await response.json() : await response.text();
                 console.log('Backend Error:', errorData);
