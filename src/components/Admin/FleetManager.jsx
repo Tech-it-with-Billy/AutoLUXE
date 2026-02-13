@@ -27,7 +27,7 @@ function FleetManager() {
         vehicle.images.forEach((image) => formData.append('images', image));
 
         try {
-            const response = await fetch('https://autoluxe-api-v1-1.onrender.com/vehicles/create/', {
+            const response = await fetch('https://autoluxe-api-v1-1.onrender.com/api/vehicles/create/', {
                 method: 'POST',
                 body: formData
             });
