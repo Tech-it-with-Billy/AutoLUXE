@@ -33,7 +33,7 @@ function BookingSummary() {
         setLoading(true);
 
         const payload = {
-            vehicle, bookingDetails,
+            vehicle_id: vehicle.id, ...bookingDetails,
         }
 
         try {
@@ -96,7 +96,7 @@ function BookingSummary() {
                         </div>
                         <div className='flex gap-5'>
                             <p className='font-bold'>Total: </p>
-                            <p>{bookingDetails.total}</p>
+                            <p>${bookingDetails.total}</p>
                         </div>
                     </div>
                     <button onClick={handlePlaceOrder} className="w-45 rounded-2xl text-white bg-black mt-10 p-1">
