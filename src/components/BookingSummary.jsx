@@ -37,8 +37,9 @@ function BookingSummary() {
         }
 
         try {
-            const response = await fetch('/booking', {
+            const response = await fetch('https://autoluxe-api-v1-1.onrender.com/api/bookings/create/', {
                 method: 'POST',
+                headers:{'ContentType': 'application/json'},
                 body: JSON.stringify(payload)
             })
 
