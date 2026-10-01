@@ -16,7 +16,8 @@ function Listings() {
                     <button className='border p-1 rounded-2xl bg-black text-white w-30'>Luxury cars</button>
                     <button className='border p-1 rounded-2xl bg-black text-white w-30'>Vintage cars</button>
                     <button className='border p-1 rounded-2xl bg-black text-white w-30'>Family cars</button>
-                    <button className='border p-1 rounded-2xl bg-black text-white w-30'>Off-road cars</button>
+                    <button className='border p-1 rounded-2xl bg-black text-white w-30'>Off-road cars</button> 
+                    
                 </div>
                 <div className='grid grid-cols-2 md:grid-cols-3 gap-5'>
                     {VehicleList.map(vehicle => (
