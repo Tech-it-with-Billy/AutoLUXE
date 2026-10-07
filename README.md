@@ -1,10 +1,10 @@
-# 🚘 AutoLuxe -- Frontend
+# 🚘 AutoLuxe
 
-Modern React frontend for a full-stack Car Rental Platform.
+Modern React and Django Car Rental Platform.
 
 AutoLuxe is a production-oriented vehicle rental system designed to
 simulate a real-world SaaS application.\
-This frontend delivers a clean, responsive user experience integrated
+The frontend delivers a clean, responsive user experience integrated
 with a Django REST API backend.
 
 ------------------------------------------------------------------------
@@ -18,7 +18,7 @@ REST API (Django + DRF)\
 PostgreSQL Database
 
 The frontend consumes secure JWT-protected endpoints and renders
-role-based interfaces for customers and administrators.
+role-based interfaces for customers, venders and administrators.
 
 ------------------------------------------------------------------------
 
