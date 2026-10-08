@@ -1,7 +1,7 @@
 import React from 'react'
 import Login from './Login'
 
-function AdminLogin() {
+function FleetLogin() {
     return (
         <div>
             <Login />
@@ -9,4 +9,4 @@ function AdminLogin() {
     )
 }
 
-export default AdminLogin
+export default FleetLogin;

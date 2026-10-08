@@ -13,13 +13,13 @@ function Login() {
                     <img className="w-full h-150 rounded-xl" src="/images/cars/regdark.jpg" alt="" />
                 </div>
                 <div className="flex flex-col gap-5 p-20 h-150  justify-center">
-                    <h1 className="text-2xl font-bold">Login to AutoLUXE Admin</h1>
+                    <h1 className="text-2xl font-bold">Login to AutoLUXE Fleet</h1>
                     <form action="submit">
                         <label htmlFor="email">Email*</label>
                         <input className="border-1 w-70 block mb-4 p-2 rounded-md" type="email" id="email" name="email" required />
                         <label htmlFor="password">Password*</label>
                         <input className="border-1 w-70 block mb-4 p-2 rounded-md" type="password" id="password" name="password" required />
-                        <Link to={'/admin-dashboard'}>
+                        <Link to={'/fleet-dashboard'}>
                             <button className="w-70 bg-black text-white p-3 rounded-3xl mt-2" type="submit">Login</button>
                         </Link>
                         

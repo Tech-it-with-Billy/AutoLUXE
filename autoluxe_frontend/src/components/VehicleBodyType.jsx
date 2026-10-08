@@ -15,7 +15,7 @@ function VehicleBodyType() {
                     </button>
                 </Link>
             </div>
-            <div className='grid grid-cols-6 px-15 gap-5'>
+            <div className='grid grid-cols-12 px-15 gap-5'>
                 <VehicleFilterIcon image='/images/bodytype/compact.png' />
                 <VehicleFilterIcon image='/images/bodytype/convertible.png' />
                 <VehicleFilterIcon image='/images/bodytype/coup.png' />
