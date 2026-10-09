@@ -21,7 +21,7 @@ function HamburgerMenu() {
                     <Link to={'/vehicles'} onClick={() => setIsOpen(false)}>Vehicles</Link>
                     <Link to={'/contact'} onClick={() => setIsOpen(false)}>Contact</Link>
                     <Link to={'/login'} onClick={() => setIsOpen(false)}>Login</Link>
-                    <Link to={'/fleet-owner'} onClick={() => setIsOpen(false)}>My Fleet</Link>
+                    <Link to={'/fleet-login'} onClick={() => setIsOpen(false)}>My Fleet</Link>
                 </nav>
             }
         </div>

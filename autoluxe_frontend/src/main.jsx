@@ -14,6 +14,7 @@ import FleetLogin from "./components/Fleet/FleetLogin.jsx";
 import FleetNavBar from "./components/Fleet/FleetNavBar.jsx";
 import FleetDashBoard from "./components/Fleet/FleetDashBoard.jsx";
 import FleetManager from "./components/Fleet/FleetManager.jsx";
+import FleetSignUp from "./components/Fleet/SignUp.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -24,10 +25,11 @@ const router = createBrowserRouter([
   { path: "/signup", element: <SignUp /> },
   { path: "/booking-form", element: <BookingForm /> },
   { path: "/booking-summary", element: <BookingSummary /> },
-  { path: "/fleet-owner", element: <FleetLogin /> },
+  { path: "/fleet-login", element: <FleetLogin /> },
   { path: "/fleet-navbar", element: <FleetNavBar /> },
   { path: "/fleet-dashboard", element: <FleetDashBoard /> },
   { path: "/fleet-manager", element: <FleetManager /> },
+  { path: "/fleet-signup", element: <FleetSignUp /> },
 ]);
 
 createRoot(document.getElementById("root")).render(

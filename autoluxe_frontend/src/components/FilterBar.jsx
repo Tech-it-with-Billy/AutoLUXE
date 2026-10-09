@@ -6,7 +6,7 @@ function FilterBar() {
     return (
         <div className='flex justify-center items-center'>
             <form action="submit" className='grid grid-cols-2 md:flex gap-5 items-center bg-gray-200 p-4 rounded-3xl -m-10'>
-                <Link to={'/fleet-owner'}>
+                <Link to={'/fleet-login'}>
                     <button type='submit' className='flex text-white bg-black rounded-2xl w-50 h-10 items-center p-3 gap-2'>
                         Register your vehicle 
                         <img src="images/arrowR.png" className='h-3' alt="" />
