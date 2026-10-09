@@ -14,7 +14,7 @@ function VehicleBrands() {
                     </button>
                 </Link>
             </div>
-            <div className='grid grid-cols-6 px-15 gap-5'>
+            <div className='grid grid-cols-12 px-10 gap-5'>
                 <VehicleFilterIcon image='/images/brands/mercedes.png' />
                 <VehicleFilterIcon image='/images/brands/audi.png' />
                 <VehicleFilterIcon image='/images/brands/bmw.png' />
