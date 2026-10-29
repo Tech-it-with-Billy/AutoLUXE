@@ -14,7 +14,7 @@ function Login() {
                 </div>
                 <div className="flex flex-col gap-5 p-20 h-150  justify-center">
                     <h1 className="text-2xl font-bold">Login to AutoLUXE</h1>
-                    <form action="submit">
+                    <form onSubmit={(event) => event.preventDefault()}>
                         <label htmlFor="email">Email*</label>
                         <input className="border-1 w-70 block mb-4 p-2 rounded-md" type="email" id="email" name="email" required />
                         <label htmlFor="password">Password*</label>
