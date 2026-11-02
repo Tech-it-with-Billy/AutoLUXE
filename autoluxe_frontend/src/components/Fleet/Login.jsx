@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../../index.css";
 import NavBar from "../navbar";
 import Footer from "../Footer";
-import { Link, useNavigate, useLocation, replace } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { loginUser } from "../../services/api"; 
 
 function Login() {
@@ -76,7 +76,7 @@ function Login() {
                     <form onSubmit={handleSubmit}>
                         <label htmlFor="email">Email*</label>
                         <input 
-                            className="border-1 w-70 block mb-4 p-2 rounded-md" 
+                            className="border w-70 block mb-4 p-2 rounded-md" 
                             type="email" 
                             id="email" 
                             name="email" 
@@ -87,7 +87,7 @@ function Login() {
                         />
                         <label htmlFor="password">Password*</label>
                         <input 
-                            className="border-1 w-70 block mb-4 p-2 rounded-md" 
+                            className="border w-70 block mb-4 p-2 rounded-md" 
                             type="password" 
                             id="password" 
                             name="password" 

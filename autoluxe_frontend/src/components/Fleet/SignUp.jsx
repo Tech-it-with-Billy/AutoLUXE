@@ -52,7 +52,7 @@ function FleetSignUp() {
         try {
             await registerUser(userData);
             setSuccess('Account created successfully, please login!')
-            setTimeout(() => navigate('/login'), 1000);
+            setTimeout(() => navigate('/fleet-login'), 1000);
         } catch (err) {
             const data = err.data
             if (data?.email) {
